@@ -21,12 +21,9 @@ To start the User Management Service, you can follow these steps:
 3. Run the server:
 
    ```shell
-   go run main.go
+   go run main.go  
+         or
    
-      
-        or
-   
-   ```
     docker build -t stumng .
    
     docker run -p 8085:8085 stumng
