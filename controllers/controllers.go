@@ -179,14 +179,7 @@ func GetRank() gin.HandlerFunc {
 			return
 		}
 
-		rank := 1
-		for _, marks := range marksArray {
-			if marks > student.Marks {
-				rank++
-			} else {
-				break
-			}
-		}
+		rank := helpers.GetRank(marksArray, student.Marks)
 
 		ctx.JSON(http.StatusOK, gin.H{"rank": rank})
 	}
