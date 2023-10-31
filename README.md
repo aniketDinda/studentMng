@@ -22,15 +22,17 @@ To start the User Management Service, you can follow these steps:
 
    ```shell
    go run main.go
+   
       
         or
    
    ```
     docker build -t stumng .
+   
     docker run -p 8085:8085 stumng
 
 
-4. Endpoints - Create a New User
+5. Endpoints - Create a New User
 
    ```shell
    curl -X POST -H "Content-Type: application/json" -d '{
@@ -42,12 +44,12 @@ To start the User Management Service, you can follow these steps:
   	"marks": 1205
    }' http://localhost:8085/student/add
 
-5. Endpoints - Fetch Students
+6. Endpoints - Fetch Students
 
    ```shell
    curl http://localhost:8081/students/view
 
-6. Endpoints - Update Student Mark
+7. Endpoints - Update Student Mark
 
    ```shell
    curl -X POST -H "Content-Type: application/json" -d '{
@@ -55,14 +57,14 @@ To start the User Management Service, you can follow these steps:
   	"marks": 1000
    }' http://localhost:8085/student/update
 
-7. Endpoints - Delete student
+8. Endpoints - Delete student
 
    ```shell
    curl -X POST -H "Content-Type: application/json" -d '{
     "name": "Aniket Dinda",
    }' http://localhost:8085/student/delete
 
-8. Endpoints - GetRank
+9. Endpoints - GetRank
 
    ```shell
    curl -X POST -H "Content-Type: application/json" -d '{
